@@ -6,15 +6,30 @@ using System.Threading.Tasks;
 
 namespace TPMOD5
 {
-    internal class HaloGeneric
+
+    internal class DataGeneric<T>
     {
-        public static void SapaUser<T>(T user)
+        T data;
+
+        public DataGeneric(T data)
         {
-            Console.WriteLine($"Halo user {user}");
+            this.data = data;
         }
+
+        public void PrintData()
+        {
+            Console.WriteLine($"Data yang tersimpan adalah: {data}");
+        }
+        
+
+    }
+    class Program 
+    {
         public static void Main()
         {
-            SapaUser("yudha");
+            DataGeneric<string> data = new DataGeneric<string>("103022300010");
+            data.PrintData();
         }
     }
+
 }
