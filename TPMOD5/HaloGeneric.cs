@@ -8,13 +8,19 @@ namespace TPMOD5
 {
     internal class HaloGeneric
     {
-        public static void SapaUser<T>(T user)
+        public void SapaUser<T>(T user)
         {
             Console.WriteLine($"Halo user {user}");
         }
+       
+    }
+
+    class Program 
+    {
         public static void Main()
         {
-            SapaUser("yudha");
+            HaloGeneric halo = new HaloGeneric();
+            halo.SapaUser("yudha");
         }
     }
 }
